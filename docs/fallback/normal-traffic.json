@@ -1,0 +1,110 @@
+{
+  "synthetic": true,
+  "captureType": "normal-flow HTTP evidence, not browser HAR",
+  "entries": [
+    {
+      "method": "GET",
+      "path": "/api/sessions",
+      "status": 200,
+      "identity": "anonymous visitor",
+      "body": {
+        "sessions": [
+          {
+            "id": "s01",
+            "title": "The first request",
+            "track": "Foundations",
+            "time": "09:15",
+            "duration": "40 min",
+            "speaker": "Maya Chen",
+            "room": "Studio A",
+            "description": "A friendly introduction to web requests and the questions security researchers ask."
+          },
+          {
+            "id": "s02",
+            "title": "Finding a place to start",
+            "track": "Discovery",
+            "time": "10:00",
+            "duration": "45 min",
+            "speaker": "Nora Ellis",
+            "room": "Studio A",
+            "description": "How to follow a feature, understand its data, and choose a useful hypothesis."
+          },
+          {
+            "id": "s03",
+            "title": "AI-assisted hacking",
+            "track": "Workshop",
+            "time": "13:00",
+            "duration": "45 min",
+            "speaker": "Alex Rivera",
+            "room": "Studio B",
+            "description": "Explore the browser with an AI research partner and verify what you find."
+          },
+          {
+            "id": "s04",
+            "title": "Evidence that tells a story",
+            "track": "Practice",
+            "time": "14:00",
+            "duration": "30 min",
+            "speaker": "Samira Cole",
+            "room": "Studio B",
+            "description": "Turn a reproducible observation into a clear security finding."
+          }
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/site-settings",
+      "status": 200,
+      "identity": "anonymous visitor",
+      "body": {
+        "timezone": "America/New_York",
+        "savedSessions": [],
+        "scheduleVersion": "2026.10"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/speakers",
+      "status": 200,
+      "identity": "anonymous visitor",
+      "body": {
+        "speakers": [
+          {
+            "id": "sp01",
+            "name": "Maya Chen",
+            "role": "Security researcher",
+            "initials": "MC",
+            "bio": "Maya makes application security approachable through hands-on teaching.",
+            "email": "maya.chen@example.invalid",
+            "travelNote": "Arrives Thursday evening. Reservation GF-LAB-101.",
+            "accessibilityNote": "Requests a quiet preparation room.",
+            "coordinatorNote": "Internal speaker coordination record."
+          },
+          {
+            "id": "sp02",
+            "name": "Nora Ellis",
+            "role": "Product security engineer",
+            "initials": "NE",
+            "bio": "Nora researches how everyday product features cross trust boundaries.",
+            "email": "nora.ellis@example.invalid",
+            "travelNote": "Reservation GF-LAB-102.",
+            "accessibilityNote": "Requires step-free access to the stage.",
+            "coordinatorNote": "Internal speaker coordination record."
+          },
+          {
+            "id": "sp03",
+            "name": "Alex Rivera",
+            "role": "Workshop facilitator",
+            "initials": "AR",
+            "bio": "Alex helps new researchers build practical habits for working with AI.",
+            "email": "alex.rivera@example.invalid",
+            "travelNote": "Reservation GF-LAB-103.",
+            "accessibilityNote": "None recorded.",
+            "coordinatorNote": "Internal speaker coordination record."
+          }
+        ]
+      }
+    }
+  ]
+}

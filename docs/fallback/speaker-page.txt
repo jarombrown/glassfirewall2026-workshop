@@ -1,0 +1,1 @@
+The Speakers page displays each speaker's name, initials, role, and biography. It does not render contact information, travel arrangements, accommodation requests, or internal coordination notes. All people and data are fictional.

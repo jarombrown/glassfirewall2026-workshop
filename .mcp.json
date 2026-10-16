@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "chrome-devtools-codespaces-shared": {
+      "type": "stdio",
+      "command": "/usr/local/bin/node",
+      "args": [
+        "/usr/local/share/npm-global/lib/node_modules/chrome-devtools-mcp/build/src/bin/chrome-devtools-mcp.js",
+        "--browser-url=http://127.0.0.1:9222",
+        "--no-usage-statistics",
+        "--performanceCrux=false",
+        "--categoryPerformance=false",
+        "--categoryMemory=false",
+        "--categoryEmulation=false",
+        "--redactNetworkHeaders"
+      ]
+    }
+  }
+}

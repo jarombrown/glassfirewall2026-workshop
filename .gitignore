@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.runtime/
+.env
+.env.*
+!.env.example
+*.har
+*.log
+.DS_Store
+.vscode/*.local.json
+instructor/
+solutions/

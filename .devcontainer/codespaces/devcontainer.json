@@ -1,0 +1,60 @@
+{
+  "name": "Glass Firewall browser lab",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "../..",
+    "options": ["--platform=linux/amd64"],
+    "args": {
+      "CHROME_VERSION": "155.0.8059.79-1",
+      "CHROME_DEVTOOLS_MCP_VERSION": "1.10.1"
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/desktop-lite:1.2.10": {
+      "password": "noPassword",
+      "webPort": "6080",
+      "vncPort": "5901"
+    }
+  },
+  "remoteUser": "node",
+  "runArgs": ["--shm-size=1g"],
+  "forwardPorts": [6080],
+  "portsAttributes": {
+    "6080": {
+      "label": "Workshop Chrome · private desktop",
+      "protocol": "http",
+      "visibility": "private",
+      "onAutoForward": "notify"
+    },
+    "9222": {
+      "label": "Chrome DevTools · container only · do not forward",
+      "onAutoForward": "ignore"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["GitHub.copilot"],
+      "settings": {
+        "remote.autoForwardPorts": false,
+        "chat.mcp.autostart": "newAndOutdated",
+        "chat.agent.sandbox.mcpServers": true,
+        "terminal.integrated.profiles.linux": {
+          "Glass Firewall": {
+            "path": "/bin/bash",
+            "args": [
+              "--rcfile",
+              "/workspaces/glassfirewall2026-workshop/.devcontainer/codespaces/terminal-bashrc.sh"
+            ]
+          }
+        },
+        "terminal.integrated.defaultProfile.linux": "Glass Firewall"
+      }
+    },
+    "codespaces": {
+      "openFiles": ["docs/CODESPACES.md"]
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/codespaces/post-create.sh",
+  "postStartCommand": "bash .devcontainer/codespaces/start-workshop-chrome.sh",
+  "postAttachCommand": "bash .devcontainer/codespaces/start-workshop-chrome.sh"
+}
